@@ -1,0 +1,12 @@
+<h1>Mensajeria de Prueba</h1>
+<div>
+    @for(message of messages; track message.id){
+        <div>
+            <h1>{{message.author}}</h1>
+            <p>{{message.text}}</p>
+            <button>Eliminar Mensaje</button>
+            <hr/>
+        </div>
+    }
+</div>
+
