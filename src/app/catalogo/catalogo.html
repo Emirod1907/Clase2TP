@@ -1,1 +1,6 @@
 <p>catalogo works!</p>
+<div>
+    @for(producto of productos; track producto.id){
+        <app-product [nombre]="producto.nombre" [precio]="producto.precio"/>
+    }
+</div>

@@ -1,1 +1,56 @@
-<p>registro works!</p>
+<div>
+    <form (submit)="registrarUsuario()">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input
+                id="nombre"
+                type="string"
+                required
+                minlenght="3"
+                maxlenght="27"
+                name="nombre"
+                [(ngModel)]="form_state.nombre">
+        </div>
+        <div>
+            <label for="apellido">Apellido</label>
+            <input
+                id="apellido"
+                type="string"
+                required
+                minlenght="3"
+                maxlenght="20"
+                name="apellido"
+                [(ngModel)]="form_state.apellido">
+        </div>
+        <div>
+            <label for="telefono">Telefono</label>
+            <input
+                id="telefono"
+                type="number"
+                required
+                name="telefono"
+                [(ngModel)]="form_state.telefono">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input
+                id="email"
+                type="email"
+                required
+                name="email"
+                [(ngModel)]="form_state.email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input
+                id="password"
+                type="password"
+                required
+                minlenght=6
+                maxlenght=10
+                name="password"
+                [(ngModel)]="form_state.password">
+        </div>
+        <button type="submit">Registrar Usuario</button>
+    </form>
+</div>

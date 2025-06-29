@@ -2,10 +2,30 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [ ],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
 export class Home {
-
+  title = 'clase_2_tp';
+   
+  nombre='Emiliano';
+  saludar(){
+    alert('Hola a todos')
+  }
+  contador=1;
+  incrementar(){
+    this.contador=this.contador+1;
+    if (this.contador===10){
+      alert('Has llegado al máximo')
+      this.contador=10
+    }
+  }
+    decrementar(){
+    this.contador=this.contador-1;
+    if (this.contador===0){
+      alert('Has llegado al minimo')
+      this.contador=0
+    }
+  }
 }

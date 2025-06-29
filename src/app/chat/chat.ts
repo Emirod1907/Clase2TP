@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms'
+
 
 @Component({
   selector: 'app-chat',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './chat.html',
   styleUrl: './chat.css'
 })
@@ -24,4 +26,12 @@ export class Chat {
       id: 3
     },
   ]
+  enviarMensaje(){
+    console.log("mensaje enviado")
+    console.log(this.form_state)
+  }
+  form_state= {
+    author:'',
+    text:''
+  }
 }
