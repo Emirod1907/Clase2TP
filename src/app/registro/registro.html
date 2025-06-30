@@ -6,8 +6,6 @@
                 id="nombre"
                 type="string"
                 required
-                minlenght="3"
-                maxlenght="27"
                 name="nombre"
                 [(ngModel)]="form_state.nombre">
         </div>
@@ -17,8 +15,6 @@
                 id="apellido"
                 type="string"
                 required
-                minlenght="3"
-                maxlenght="20"
                 name="apellido"
                 [(ngModel)]="form_state.apellido">
         </div>
@@ -46,10 +42,15 @@
                 id="password"
                 type="password"
                 required
-                minlenght=6
-                maxlenght=10
+                minlength="6"
+                maxlength="10"
                 name="password"
-                [(ngModel)]="form_state.password">
+                [(ngModel)]="form_state.password"
+                #password="ngModel"
+                >
+                @if( password.dirty && password.invalid){
+                    <span>El password debe tener una longitud entre 6 y 10 caracteres</span>
+                }
         </div>
         <button type="submit">Registrar Usuario</button>
     </form>
